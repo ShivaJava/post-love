@@ -4,13 +4,13 @@
       <b-col>
         <b-form>
           <b-form-group
-                  label="Имя"
-                  label-for="name"
+                  label="email"
+                  label-for="email"
                 >
                   <b-form-input
-                    id="name"
-               
-                    type="text"
+                    id="email"
+                    v-model="user.email"
+                    type="email"
                     required
                   ></b-form-input>
                 </b-form-group>
@@ -31,7 +31,9 @@ export default {
   // name: 'me',
   data() {
     return {
-      user: {}
+      user: {
+        email: this.$store.getters.getUser.email, 
+      }
     }
   },
   // mounted() {
